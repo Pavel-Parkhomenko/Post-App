@@ -17,11 +17,12 @@ export function LeftBar() {
     <List sx={
       {
         height: '100vh',
-        borderRight: 1,
         position: 'fixed',
-        bgcolor: { xs: 'blue', md: 'inherit' },
-        pl: { xs: 0, md: 2 },
-        pr: { xs: 0, md: 2 }
+        bgcolor: { xs: 'primary.main', md: 'inherit' },
+        pl: 0,
+        pr: {
+          xs: 0, sm: 2, md: 3, lg: 4, xl: 5
+        },
       }
     }
     >
@@ -31,9 +32,20 @@ export function LeftBar() {
           sx={{
             justifyContent: 'center',
             pd: 3,
+            pl: 0,
+            pr: 0,
           }}
         >
-          <ListItemIcon sx={{ justifyContent: 'center' }}>
+          <ListItemIcon
+            sx={
+            {
+              justifyContent: 'center',
+              color: { xs: 'white', md: 'black' },
+              pl: { xs: 0, md: 2 },
+              pr: { xs: 0, md: 2 },
+            }
+          }
+          >
             { icon }
           </ListItemIcon>
           <ListItemText primary={title} sx={{ display: { xs: 'none', sm: 'block' } }} />

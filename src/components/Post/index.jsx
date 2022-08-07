@@ -11,7 +11,7 @@ export function Post() {
   return (
     <Card sx={{ mb: 5 }}>
       <CardMedia
-        sx={{ height: { xs: '120', md: '250' } }}
+        sx={{ height: { xs: '120px', md: '250px' } }}
         component="img"
         alt="green iguana"
         image={url}

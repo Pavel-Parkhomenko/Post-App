@@ -25,7 +25,8 @@ export function NavBar() {
             display: {
               xs: 'none',
               sm: 'block'
-            }
+            },
+            color: 'secondary.main'
           }}
         >
           Logo My App
@@ -37,7 +38,8 @@ export function NavBar() {
             display: {
               xs: 'block',
               sm: 'none'
-            }
+            },
+            color: 'secondary.main'
           }}
         >
           Logo
@@ -53,7 +55,15 @@ export function NavBar() {
             }}
           />
         </Search>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box
+          sx={
+          {
+            display: 'flex',
+            alignItems: 'center',
+            color: 'secondary.main'
+          }
+        }
+        >
           <IconButton
             onClick={() => setIsOpen(!isOpen)}
             sx={

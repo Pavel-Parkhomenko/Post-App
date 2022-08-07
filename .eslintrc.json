@@ -43,6 +43,7 @@
     "no-unused-vars": "off",
     "react/prop-types": "off",
     "no-param-reassign": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/extensions": [
       "off",
       "ignorePackages",

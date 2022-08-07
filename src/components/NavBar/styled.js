@@ -11,6 +11,7 @@ export const Search = styled('div', ['shouldForwardProp'])(({ theme, open }) => 
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
+  display: 'flex',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
     width: 'auto',
