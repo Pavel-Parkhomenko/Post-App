@@ -3,7 +3,6 @@ import { Grid, Divider } from '@mui/material'
 import { LeftBar } from '../components/LeftBar'
 import { Feed } from '../components/Feed'
 import { RightBar } from '../components/RightBar'
-import { Add } from '../components/Add'
 
 export function Home() {
   return (
@@ -22,7 +21,6 @@ export function Home() {
           <RightBar />
         </Grid>
       </Grid>
-      <Add />
     </div>
   )
 }
