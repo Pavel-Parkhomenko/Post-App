@@ -1,11 +1,12 @@
-import React from 'react'
+import * as React from 'react'
+import { ThemeProvider } from '@mui/material/styles'
+import { Home } from './pages/Home'
+import { theme } from './theme'
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
   )
 }
-
-export default App
