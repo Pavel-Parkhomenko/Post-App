@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { Divider, Grid } from '@mui/material'
+import { useSelector, useDispatch } from 'react-redux'
 import { LeftBar } from '../components/LeftBar'
 import { RightBar } from '../components/RightBar'
-import { Market } from '../components/Market'
-import { fetchProducts } from '../store/productSlice'
+import { GalleryList } from '../components/GalleryList'
+import { fetchGallery } from '../store/gallerySlice'
 
-export function MarketPlace() {
+export function Gallery() {
   const dispatch = useDispatch()
-  const { products } = useSelector(state => state.product)
+  const { gallery } = useSelector(state => state.gallery)
 
   useEffect(() => {
-    dispatch(fetchProducts())
+    dispatch(fetchGallery())
   }, [dispatch])
 
   return (
@@ -24,7 +24,7 @@ export function MarketPlace() {
           />
         </Grid>
         <Grid item sm={6} xs={10}>
-          <Market products={products} />
+          <GalleryList galleryItems={gallery} />
         </Grid>
         <Grid item sm={4} sx={{ display: { xs: 'none', md: 'block' } }}>
           <RightBar />

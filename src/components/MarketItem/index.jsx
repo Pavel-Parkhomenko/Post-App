@@ -13,9 +13,12 @@ export function MarketItem({
   rating
 }) {
   return (
-    <ListItem>
+    <ListItem sx={
+      { justifyContent: 'center' }
+    }
+    >
       <Card
-        sx={{ height: '100%' }}
+        sx={{ width: 600 }}
       >
         <CardMedia
           component="img"
@@ -24,15 +27,23 @@ export function MarketItem({
           image={image}
         />
         <CardContent>
-          <Typography>
+          <Typography variant="h5" component="h3">
             { title }
           </Typography>
-          <Typography>
+          <Typography
+            variant="body2"
+            sx={{ mt: 3, color: 'gray' }}
+          >
             { description }
           </Typography>
         </CardContent>
-        <CardActions>
-          <Rating name="half-rating-read" defaultValue={rating} precision={0.5} readOnly />
+        <CardActions sx={{ justifyContent: 'space-between' }}>
+          <Rating
+            name="half-rating-read"
+            defaultValue={rating}
+            precision={0.5}
+            readOnly
+          />
           <Button
             size="small"
           >

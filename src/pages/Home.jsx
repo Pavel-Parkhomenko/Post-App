@@ -14,10 +14,10 @@ export function Home() {
             orientation="vertical"
           />
         </Grid>
-        <Grid item sm={7} xs={10}>
+        <Grid item sm={6} xs={10}>
           <Feed />
         </Grid>
-        <Grid item sm={3} sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Grid item sm={4} sx={{ display: { xs: 'none', md: 'block' } }}>
           <RightBar />
         </Grid>
       </Grid>

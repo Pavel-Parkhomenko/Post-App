@@ -7,6 +7,7 @@ import { theme } from './theme'
 import store from './store/store'
 import { NavBar } from './components/NavBar'
 import { MarketPlace } from './pages/MarketPlace'
+import { Gallery } from './pages/Gallery'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="products" element={<MarketPlace />} />
+            <Route path="gallery" element={<Gallery />} />
             <Route path="*" element={<h1>Page not found</h1>} />
           </Routes>
         </BrowserRouter>

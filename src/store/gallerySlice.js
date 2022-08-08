@@ -38,7 +38,7 @@ const gallerySlice = createSlice({
         state.error = null
       })
       .addCase(fetchGallery.fulfilled, (state, action) => {
-        state.gallery = action.payload
+        state.gallery = action.payload.photos
         state.loading = false
         state.error = null
       })
