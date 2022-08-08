@@ -42,7 +42,6 @@ export function GalleryItem({
         />
         <CardMedia
           component="img"
-          height="200"
           image={src}
           alt={alt}
         />
@@ -57,7 +56,7 @@ export function GalleryItem({
             onClick={handleLike}
           >
             <Badge color={colorLike} badgeContent={cntLikes} max={10}>
-              <FavoriteIcon color={colorLike} />
+              <FavoriteIcon />
             </Badge>
           </IconButton>
           <IconButton aria-label="share">

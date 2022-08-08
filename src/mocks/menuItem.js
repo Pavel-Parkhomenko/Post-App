@@ -1,5 +1,4 @@
 import React from 'react'
-import MailIcon from '@mui/icons-material/Mail'
 import HomeIcon from '@mui/icons-material/Home'
 import GroupIcon from '@mui/icons-material/Group'
 import CollectionsIcon from '@mui/icons-material/Collections'
@@ -13,41 +12,49 @@ export const menuItem = [
   {
     id: 1,
     title: 'Homepage',
-    icon: <HomeIcon />
+    icon: <HomeIcon />,
+    to: '/'
   },
   {
     id: 2,
     title: 'Friends',
-    icon: <GroupIcon />
+    icon: <GroupIcon />,
+    to: 'friends'
   },
   {
     id: 4,
     title: 'Gallery',
-    icon: <CollectionsIcon />
+    icon: <CollectionsIcon />,
+    to: 'gallery'
   },
   {
     id: 5,
     title: 'Videos',
-    icon: <OndemandVideoIcon />
+    icon: <OndemandVideoIcon />,
+    to: 'videos'
   },
   {
     id: 6,
     title: 'Apps',
-    icon: <AppsIcon />
+    icon: <AppsIcon />,
+    to: 'apps'
   },
   {
     id: 8,
     title: 'Market Place',
-    icon: <LocalGroceryStoreIcon />
+    icon: <LocalGroceryStoreIcon />,
+    to: 'market'
   },
   {
     id: 9,
     title: 'Settings',
-    icon: <SettingsIcon />
+    icon: <SettingsIcon />,
+    to: 'settings'
   },
   {
     id: 10,
     title: 'Logout',
-    icon: <LogoutIcon />
+    icon: <LogoutIcon />,
+    to: 'logout'
   },
 ]

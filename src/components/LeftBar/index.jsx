@@ -1,17 +1,13 @@
-import * as React from 'react'
-import { useTheme } from '@mui/material/styles'
-import List from '@mui/material/List'
-import Divider from '@mui/material/Divider'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import { Container } from '@mui/material'
+import React from 'react'
+import {
+  List, ListItem, ListItemButton,
+  ListItemIcon, ListItemText
+} from '@mui/material'
+import { Link, useLocation } from 'react-router-dom'
 import { menuItem } from '../../mocks/menuItem'
 
 export function LeftBar() {
-  const theme = useTheme()
+  const { pathname } = useLocation()
 
   return (
     <List sx={
@@ -26,30 +22,39 @@ export function LeftBar() {
       }
     }
     >
-      {menuItem.map(({ title, icon, id }) => (
-        <ListItemButton
+      {menuItem.map(({
+        title, icon, id, to
+      }) => (
+        <ListItem
           key={id}
           sx={{
             justifyContent: 'center',
-            pd: 3,
-            pl: 0,
-            pr: 0,
+            px: {
+              xs: 0,
+              md: 3,
+            }
           }}
         >
-          <ListItemIcon
-            sx={
-            {
-              justifyContent: 'center',
-              color: { xs: 'white', md: 'black' },
-              pl: { xs: 0, md: 2 },
-              pr: { xs: 0, md: 2 },
-            }
-          }
+          <ListItemButton
+            components={Link}
+            to={to}
+            sx={{ pl: 0, pr: { xs: 0 } }}
           >
-            { icon }
-          </ListItemIcon>
-          <ListItemText primary={title} sx={{ display: { xs: 'none', sm: 'block' } }} />
-        </ListItemButton>
+            <ListItemIcon
+              sx={
+                {
+                  justifyContent: 'center',
+                  color: { xs: 'white', md: 'black' },
+                  pl: 0,
+                  pr: 0,
+                }
+              }
+            >
+              { icon }
+            </ListItemIcon>
+            <ListItemText primary={title} sx={{ display: { xs: 'none', sm: 'block' } }} />
+          </ListItemButton>
+        </ListItem>
       ))}
     </List>
   )
