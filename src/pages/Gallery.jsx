@@ -12,6 +12,7 @@ export function Gallery() {
 
   useEffect(() => {
     dispatch(fetchGallery())
+    console.log('gallery-dispatch')
   }, [dispatch])
 
   return (
